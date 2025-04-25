@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJ Hunter - The Best of 2004-2009</title>
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #e09522;
+      margin: 0;
+      padding: 20px;
+    }
+    .set-entry {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .play-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+    .play-button img {
+      width: 100%;
+      height: auto;
+    }
+    #mixcloud-player {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      z-index: 1000;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    #mixcloud-iframe {
+      width: 100%;
+      height: 120px;
+      border: none;
+    }
+    #player-close {
+      background: transparent;
+      color: white;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DJ Hunter - The Best of 2004-2009</h1>
+  <div id="sety">
+    
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-001-2015-03-04/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 001 (2015-03-04)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-002-more-vocals-2015-04-01/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 002 (More Vocals) (2015-04-01)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-003-2015-05-06/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 003 (2015-05-06)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-004-2015-06-03/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 004 (2015-06-03)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-005-special-summer-edition-2015-07-01/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 005 (Special Summer Edition) (2015-07-01)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-006-special-summer-edition-part-2-2015-08-05/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 006 (Special Summer Edition Part 2) (2015-08-05)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-007-2015-09-02/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 007 (2015-09-02)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-008-special-birthday-episode-2015-10-03/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 008 (Special Birthday Episode) (2015-10-03)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-009-2015-11-04/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 009 (2015-11-04)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-010-2015-12-02/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 010 (2015-12-02)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-011-special-new-year-episode-2016-01-06/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 011 (Special New Year Episode) (2016-01-06)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-012-2016-02-03/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 012 (2016-02-03)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-013-2016-03-02/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 013 (2016-03-02)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-014-2016-04-06/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 014 (2016-04-06)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-015-2016-05-04/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 015 (2016-05-04)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-016-2016-06-01/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations 016 (2016-06-01)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-001-special-edition-the-beginning-2015-03-18/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 001 (Special Edition: The Beginning) (2015-03-18)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-002-2015-04-15/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 002 (2015-04-15)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-003-extended-edition-2015-05-20/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 003 (Extended Edition) (2015-05-20)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-004-2015-06-17/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 004 (2015-06-17)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-005-2015-07-15/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 005 (2015-07-15)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-006-2015-08-15/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 006 (2015-08-15)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-007-2015-09-16/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 007 (2015-09-16)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-008-special-birthday-episode-2015-10-17/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 008 (Special Birthday Episode) (2015-10-17)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-009-more-piano-2015-11-18/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 009 (More Piano) (2015-11-18)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-010-2015-12-16/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 010 (2015-12-16)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-011-2016-01-20/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 011 (2016-01-20)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-012-2016-02-17/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 012 (2016-02-17)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-013-2nd-year-of-2-faces-2016-03-16/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 013 (2nd Year of 2 Faces) (2016-03-16)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-014-2016-04-20/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 014 (2016-04-20)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-015-2016-05-18/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 015 (2016-05-18)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-016-2016-06-15/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip 016 (2016-06-15)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-progressive-vibrations-vol-1-special-mix-for-insomnia-2014/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Progressive Vibrations (Special Mix for Insomnia 2014) (2014-07-30)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-the-best-of-2014/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip (The Best of 2014) (2015-01-18)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-maarten-metz-karoryna-chris-antoua-classic-trance-mix-2015/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter, Maarten Metz, Karoryna & Chris Antoua - Classic Trance Mix 2015 (2015-04-30)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/chris-vestley-from-the-depths-of-the-earth-086-dj-hunter-guestmix/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>Chris Vestley - From The Depths Of The Earth 086 (DJ Hunter Guestmix) (2015-05-14)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-venice-dream-of-venice-special-mix/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter & Venice - Dream of Venice (Special Mix) (2015-08-01)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-t4l-trance-4-life-special-mix/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter & T4L - Trance 4 Life (Special Mix) (2015-09-01)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/DjHunterMaartenMetz/dj-hunter-maarten-metz-deep-vision-001/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter & Maarten Metz - Deep Vision 001 (2015-09-11)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/DjHunterMaartenMetz/dj-hunter-maarten-metz-eoyc-2015-contest/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter & Maarten Metz - EOYC 2015 Contest (2015-10-20)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-special-orchestral-edition-dedicated-to-my-little-devil/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip: Special Orchestral Edition (Dedicated To My Little Devil) (2015-11-01)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/DjHunterMaartenMetz/dj-hunter-maarten-metz-eoyc-2015-2015-12-24/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter & Maarten Metz - End Of Year Countdown 2015 at AH.FM (2015-12-24)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-diabli-sax-for-christmas-special-mix/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter & Diabli - Sax for Christmas (Special Mix) (2015-12-25)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-christmas-with-power-basse-group-battle-2015-12-25/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Christmas with Power-Basse (Group Battle) (2015-12-25)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-emotional-trip-the-best-of-2015-year-mix/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Emotional Trip: The Best of 2015 (Year Mix) (2016-01-06)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/DjHunterMaartenMetz/dj-hunter-maarten-metz-deep-vision-002/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter & Maarten Metz - Deep Vision 002 (2016-04-01)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-faster-harder-trancer-vol-1/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Faster, Harder, Trancer vol. 1 (2016-07-09)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-diabli-summer-memories-live-power-bassepl-7th-birthday-party-2016-10-08/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter & Diabli - Summer Memories (Live @ Power-Basse.pl 7th Birthday Party) (2016-10-08)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-b2b-mindflux-christmas-with-power-basse-2016-12-26/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter b2b Mindflux - Christmas with Power-Basse (2016-12-26)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-live-dreamcreator-2k17-b-day-2017-03-04/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Live @ Dreamcreator 2k17 B-Day (2017-03-04)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-summer-memories-2017-2017-10-07/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter - Summer Memories 2017 (2017-10-07)</span>
+    </div>
+    
+
+    <div class="set-entry">
+      <button class="play-button" data-url="https://www.mixcloud.com/djhunter_PL/dj-hunter-diabli-deeper-2018-02-14/">
+        <img src="img/play.svg" alt="Play">
+      </button>
+      <span>DJ Hunter & Diabli - Deeper (2018-02-14)</span>
+    </div>
+    
+  </div>
+
+  <div id="mixcloud-player">
+    <button id="player-close"><img src="img/close.svg" alt="Close" style="width: 20px;"></button>
+    <iframe id="mixcloud-iframe" allow="autoplay"></iframe>
+  </div>
+
+  <script src="player.js"></script>
+</body>
+</html>
